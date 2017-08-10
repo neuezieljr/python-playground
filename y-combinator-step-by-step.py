@@ -10,12 +10,13 @@ print " * factorial() 5!", [ factorial(x) for x in range(1, 5) ]
 
 #
 # The goal is to parameterize factorial function
+# reference: https://stackoverflow.com/questions/93526/what-is-a-y-combinator
 
 #
 # step 1: Parameterize factial function
 #         We first create an other function call
 #         recursive, and call the origial factorial.
-#         
+#
 
 def factorial(recursive):
     return lambda x: 1 if x < 2 else x * recursive(x-1)
